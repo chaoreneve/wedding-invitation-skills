@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <rect width="900" height="1200" fill="#d7c7b8"/>
+  <circle cx="450" cy="510" r="150" fill="none" stroke="#8b6d62" stroke-width="8"/>
+  <path d="M240 910c70-170 350-170 420 0" fill="none" stroke="#8b6d62" stroke-width="8"/>
+  <text x="450" y="1080" text-anchor="middle" font-family="serif" font-size="42" fill="#694f47">照片待添加</text>
+</svg>

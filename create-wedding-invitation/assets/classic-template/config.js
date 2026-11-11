@@ -1,0 +1,1 @@
+window.INVITATION = __INVITATION_CONFIG__;

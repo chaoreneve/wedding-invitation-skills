@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>婚礼邀请</title>
+    <meta name="description" content="诚邀您参加我们的婚礼" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="婚礼邀请" />
+    <meta property="og:description" content="诚邀您参加我们的婚礼" />
+    <meta property="og:image" content="./assets/placeholder.svg" />
+  <link rel="stylesheet" href="./styles.css?v=music-control-1" />
+  <link rel="stylesheet" href="./music-control.css?v=1" />
+  <link rel="stylesheet" href="./print.css" media="print" />
+  <link rel="stylesheet" href="./theme-presets.css" />
+  <link rel="stylesheet" href="./theme-palette.css" />
+  <link rel="stylesheet" href="./location-card.css?v=1" />
+  <link rel="stylesheet" href="./mobile-pages.css?v=3" />
+  <link rel="stylesheet" href="./gallery-player.css?v=classic-2" />
+  <link rel="stylesheet" href="./composition.css?v=1" />
+  </head>
+  <body>
+    <div class="controls">
+      <button id="musicButton" type="button" aria-label="播放音乐" hidden>♪</button>
+    </div>
+    <main>
+      <section class="scene cover" id="welcome">
+        <div class="water" aria-hidden="true"></div>
+        <p class="eyebrow" id="eyebrow"></p>
+        <h1 id="title"></h1>
+        <p class="couple"><span id="groom"></span><i>&amp;</i><span id="bride"></span></p>
+        <p id="invitation"></p>
+        <button class="photo cover-photo" id="coverPhoto" type="button"></button>
+        <p class="meta"><time id="date"></time><span id="venueShort"></span></p>
+        <a class="primary" href="#gallery">开始旅程</a>
+      </section>
+      <section class="scene gallery" id="gallery">
+        <p class="eyebrow">Our Story</p>
+        <h2 id="galleryTitle"></h2>
+        <p id="galleryIntro"></p>
+        <div class="film" id="galleryList"></div>
+      </section>
+      <section class="scene ticket" id="ticket">
+        <article class="card">
+          <p class="eyebrow">Wedding Invitation</p>
+          <h2><span id="ticketGroom"></span> &amp; <span id="ticketBride"></span></h2>
+          <dl><div><dt>婚礼时间</dt><dd id="ticketDate"></dd></div><div><dt>宴会场地</dt><dd id="venue"></dd></div><div id="dressRow"><dt>着装建议</dt><dd id="dresscode"></dd></div></dl>
+          <section class="location-card" aria-labelledby="locationHeading">
+            <div class="location-heading">
+              <svg width="24" height="28" viewBox="0 0 24 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 15-9 15S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <h3 id="locationHeading">赴宴地址</h3>
+            </div>
+            <p class="location-venue" id="locationVenue"></p>
+            <p class="location-address" id="address"></p>
+            <a class="location-link" id="mapLink" target="_blank" rel="noopener noreferrer" hidden>打开高德地图 <span aria-hidden="true">↗</span></a>
+            <p class="location-note">地图定位至酒店，抵达后请前往宴会厅。</p>
+          </section>
+          <ol id="timeline"></ol>
+          <p class="countdown">婚礼倒计时 <strong><span id="days">--</span> Days</strong></p>
+        </article>
+      </section>
+      <section class="scene ending" id="ending">
+        <p class="eyebrow">See You There</p>
+        <h2 id="closing"></h2>
+        <button class="photo ending-photo" id="endingPhoto" type="button"></button>
+        <p id="signature"></p>
+      </section>
+    </main>
+    <dialog id="lightbox"><button id="closeLightbox" aria-label="关闭">×</button><img id="lightboxImage" alt="" /><h2 id="lightboxTitle"></h2><p id="lightboxCaption"></p></dialog>
+    <script src="./config.js?v=timeline-5"></script><script src="./invite.js?v=music-unlock-2"></script>
+    <script src="./gallery-player.js?v=classic-2"></script>
+  </body>
+</html>

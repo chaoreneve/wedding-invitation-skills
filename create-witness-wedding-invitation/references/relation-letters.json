@@ -1,0 +1,17 @@
+{
+  "00": {"relationship": "通用亲友", "stamp": "Witness", "greeting": "亲爱的 {name}：", "paragraphs": ["谢谢你接受我们的邀请。", "这一天对我们意义特别，期待与你一起分享婚礼的喜悦，见证新的开始。"]},
+  "01": {"relationship": "家人", "stamp": "Family", "greeting": "亲爱的 {name}：", "paragraphs": ["感谢家人的关心与陪伴，让我们在重要时刻总能感受到温暖。", "婚礼这一天，诚挚邀请你来到现场，见证我们组成新的家庭。"]},
+  "02": {"relationship": "姐姐", "stamp": "Sister", "greeting": "亲爱的 {name}：", "paragraphs": ["谢谢姐姐一直以来的关心与支持。", "希望在婚礼这一天与你分享喜悦，请你见证我们共同开启新生活。"]},
+  "03": {"relationship": "妹妹", "stamp": "Sister", "greeting": "亲爱的 {name}：", "paragraphs": ["妹妹，感谢你为我们的生活带来许多笑容。", "邀请你来到婚礼现场，与我们一起分享这份幸福。"]},
+  "04": {"relationship": "哥哥", "stamp": "Brother", "greeting": "亲爱的 {name}：", "paragraphs": ["谢谢哥哥一直以来的关心和支持。", "这个重要的日子，期待你来到现场，见证我们的承诺。"]},
+  "05": {"relationship": "弟弟", "stamp": "Brother", "greeting": "亲爱的 {name}：", "paragraphs": ["弟弟，谢谢你与我们分享生活中的欢乐。", "婚礼这一天，期待与你一起庆祝，也请你见证我们的新起点。"]},
+  "06": {"relationship": "初中同学", "stamp": "Classmate", "greeting": "亲爱的 {name}：", "paragraphs": ["初中同学的相识，是青春里值得珍藏的一段缘分。", "希望你来到婚礼现场，与我们分享人生新阶段的喜悦。"]},
+  "07": {"relationship": "高中同学", "stamp": "Classmate", "greeting": "亲爱的 {name}：", "paragraphs": ["高中岁月因同学间的陪伴而格外珍贵。", "婚礼这一天，诚挚邀请你与我们重聚，见证新的开始。"]},
+  "08": {"relationship": "大学同学", "stamp": "Classmate", "greeting": "亲爱的 {name}：", "paragraphs": ["大学时的相识，让我们拥有一段特别的同窗缘分。", "期待在婚礼现场与你相见，分享这份重要的喜悦。"]},
+  "09": {"relationship": "研究生同学", "stamp": "Classmate", "greeting": "亲爱的 {name}：", "paragraphs": ["研究生阶段的同窗情谊，值得我们珍惜。", "邀请你来到婚礼现场，见证我们迈向人生新的篇章。"]},
+  "10": {"relationship": "前同事", "stamp": "Friend", "greeting": "亲爱的 {name}：", "paragraphs": ["曾经共事的缘分，让我们有机会相识。", "这次也想与你分享婚礼的喜悦，诚挚邀请你来到现场。"]},
+  "11": {"relationship": "现同事", "stamp": "Colleague", "greeting": "亲爱的 {name}：", "paragraphs": ["感谢工作中与你的相识和支持。", "我们想把婚礼这份喜讯分享给你，诚挚邀请你来现场见证。"]},
+  "12": {"relationship": "发小", "stamp": "Old Friend", "greeting": "亲爱的 {name}：", "paragraphs": ["从小相识的缘分，让这份友谊格外特别。", "人生迎来重要的一天，期待你继续在场，与我们一起分享快乐。"]},
+  "13": {"relationship": "好兄弟", "stamp": "Brother", "greeting": "亲爱的兄弟 {name}：", "paragraphs": ["谢谢你一直以来的友情与支持。", "婚礼这一天，希望你来到现场，与我们一起见证承诺、分享喜悦。"]},
+  "14": {"relationship": "研究生导师", "stamp": "Advisor", "greeting": "尊敬的 {name}：", "paragraphs": ["感谢您在求学阶段的指导与关照。", "谨邀请您莅临婚礼现场，见证我们开启人生新的阶段。"]}
+}

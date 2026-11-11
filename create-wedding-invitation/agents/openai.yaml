@@ -1,0 +1,4 @@
+interface:
+  display_name: "经典版婚礼请柬制作"
+  short_description: "生成、校验、导出并发布经典展览式婚礼请柬"
+  default_prompt: "使用 $create-wedding-invitation 根据我的婚礼信息和照片制作一份经典展览式网页请柬。"

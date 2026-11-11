@@ -1,0 +1,34 @@
+/* Loaded after both preset and print CSS; applies to complete custom palettes. */
+html[data-palette] { --ink:var(--palette-text); --accent:var(--palette-accent); --paper:var(--palette-paper); --texture:url('./assets/vintage-paper-bg.jpg'); }
+html[data-palette][data-texture="none"] { --texture:none; }
+html[data-palette] .water { display:none; }
+html[data-palette] .cover {
+  color:var(--palette-surfaceText);
+  background:var(--texture) center/cover, var(--palette-surface);
+  background-blend-mode:multiply;
+}
+html[data-palette] .cover::after { background:none; opacity:0; }
+html[data-palette] .cover::before {
+  content:""; position:absolute; inset:24px; z-index:1;
+  border:1px solid var(--palette-metallic); outline:1px solid var(--palette-metallic);
+  outline-offset:7px; pointer-events:none;
+}
+html[data-palette] .cover h1,
+html[data-palette] .cover .eyebrow,
+html[data-palette] .cover .couple i { color:var(--palette-surfaceText); text-shadow:none; }
+html[data-palette] .cover .primary { color:var(--palette-surfaceText); background:transparent; border-color:var(--palette-metallic); }
+html[data-palette] .gallery, html[data-palette] dialog {
+  background:var(--palette-surfaceDark); color:var(--palette-darkText);
+}
+html[data-palette] .gallery .eyebrow { color:var(--palette-darkText); }
+html[data-palette] .ticket, html[data-palette] .ending {
+  background:var(--texture) center/cover, var(--palette-paper); background-blend-mode:multiply;
+  color:var(--palette-text);
+}
+html[data-palette] .ending h2, html[data-palette] .ending .eyebrow { color:var(--palette-text); }
+html[data-palette] .card { background:var(--palette-card); color:var(--palette-cardText); border-color:var(--palette-metallic); box-shadow:0 20px 50px #0002; }
+html[data-palette] .card dt, html[data-palette] .card .eyebrow, html[data-palette] .countdown strong { color:var(--palette-accent); }
+html[data-palette] .card dl div { border-bottom-color:var(--palette-metallic); }
+html[data-palette] .photo, html[data-palette] .cover .photo, html[data-palette] .gallery .photo, html[data-palette] .ending-photo { box-shadow:0 18px 45px #0003,0 0 0 1px var(--palette-metallic); }
+html[data-palette] .controls button, html[data-palette] #closeLightbox { background:var(--palette-surfaceDark); color:var(--palette-darkText); border-color:var(--palette-metallic); }
+html[data-palette] [hidden] { display:none!important; }

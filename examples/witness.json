@@ -1,0 +1,13 @@
+{
+  "couple": {"groom": "林一", "bride": "周宁", "brideFirst": true},
+  "event": {
+    "datetime": "2027-05-20T12:18:00+08:00",
+    "date": "2027.05.20",
+    "time": "中午12:18",
+    "venue": "演示酒店 · 花园厅",
+    "address": "虚构城市演示路 20 号"
+  },
+  "recipient": {"name": "亲友", "relationship": "通用亲友", "verifyName": false},
+  "privacy": {"noindex": true},
+  "media": {"music": "", "gallery": []}
+}

@@ -1,0 +1,27 @@
+# Optional viewing and publication
+
+Read this only when the invitation is ready to view or publish. Use the current Cloudflare documentation to verify labels and limits; the dashboard may change. Official reference: https://developers.cloudflare.com/pages/get-started/direct-upload/
+
+## Offer the choice
+
+After the user approves the final materials and wording, explain the tradeoff before asking once:
+
+- Public hosting gives each completed version a phone-friendly HTTPS link that guests can open remotely; no GitHub account or file download is needed. It also makes uploaded HTML, photos, music, event details and personalized wording publicly reachable to anyone with the link and potentially beyond. A hard-to-guess URL, `noindex`, and the page's identity check are not security controls. Confirm the people shown in photos consent to publication, what versions may be public, and who may receive their links. Check optimized photos for GPS/EXIF and other private metadata before packaging; the ZIP helper rejects common EXIF/XMP markers but is not a complete metadata scrubber. The bundled classic BGM is for personal non-commercial invitations only; do not use it commercially.
+- Local-only keeps the files on the user's device. Give the absolute path to each `site/index.html` and, when practical, start a local HTTP preview and provide its `http://127.0.0.1:<port>/` link. Explain that `127.0.0.1` works only on the same device and cannot be sent to remote guests. A phone on the same Wi-Fi can use the computer's local-network address only while the computer and preview server stay on; request consent before exposing the preview on the local network. Otherwise offer the validated ZIP for file transfer or later hosting.
+
+Do not package or publish a draft with missing media unless the user expressly chooses a photo-free final version. A confirmation to preview is not permission to publish.
+
+## Cloudflare Pages direct upload
+
+Use this only when the user opts in to public hosting. Prefer the Cloudflare dashboard's Pages Direct Upload via available browser/computer-use tools; avoid broad CLI OAuth grants merely for a static upload. Upload only the reviewed release ZIP, never the raw generated folder. If the user chooses a different provider, follow that choice rather than silently switching.
+
+1. Confirm final assets and personalized letters; produce one validated site and one hosting ZIP per version. Inspect the ZIP root: `index.html`, CSS, JS and `assets/` must be present; `invitation.json`, private notes, credentials, unused originals and a batch guest list must be absent. Show the exact included recipient and release contents before upload. Distinct recipient versions need distinct projects and links unless the user explicitly chooses another arrangement.
+2. If the user has no Cloudflare account, guide them to Cloudflare's official sign-up page. The user personally enters their email, password, verification code or link, completes CAPTCHAs, and accepts any terms. Never ask them to send passwords, codes, recovery keys or tokens in chat. If already signed in, use that session without copying its data. Ask before authorizing any new integration or unusually broad access.
+3. In the dashboard, find Workers & Pages → Create application → Pages → Direct Upload / drag-and-drop. Name a new project without embedding recipient names if not needed, select the correct reviewed ZIP, wait for all files to upload, then deploy. UI labels may differ; inspect the live page. Do not attach a Git repository unless requested. Direct Upload does not automatically become Git-connected later.
+4. For each resulting `pages.dev` URL, verify public HTTP success, correct couple/recipient/date/venue, key image and audio assets, and the opening, identity, letter and gallery flow in an actual browser. Check phone-sized layout if anything changed after earlier QA. Report each verified link, version distinction, and any remaining warnings. Never present a localhost address as a public link.
+
+5. The first assigned URL may still have a relative `og:image`. The default is the bundled sealed-envelope image, not a gallery photo. Before sharing, set `sharing.url` to that recipient version's verified HTTPS URL, regenerate into a new folder, revalidate and upload a new reviewed ZIP to the same project. Check that the final public HTML contains an absolute HTTPS `og:image` pointing to the envelope (or an explicit user replacement) and that the image loads without login. WeChat controls the eventual card appearance; verify a real share preview instead of promising a fixed layout.
+
+## Account privacy
+
+Never record account email, account ID, passwords, one-time codes, cookies, browser storage, OAuth callbacks, API keys or tokens in the skill, template, config, ZIP, repository, screenshots, notes or final answer. Do not print or copy authentication URLs or secret-bearing tool output into artifacts. Do not export the browser profile or automate credential extraction. Do not create or keep a persistent CLI login or token just for this workflow. If the user logs in during this task, leave credential entry and security checks to them; if the agent created a temporary session, offer to sign out at the end, but do not sign out of a pre-existing session without asking. Browser/service security logs and the user's own saved-login settings are outside the skill's control; do not promise they disappear. The reusable skill must contain only generic instructions and sanitized demo assets.

@@ -1,0 +1,31 @@
+/* A restrained four-page rhythm; interaction and photo content stay unchanged. */
+@media screen and (max-width:600px) {
+  .scene > .eyebrow { letter-spacing:.26em; }
+  #galleryIntro { max-width:25em; padding-inline:10px; color:inherit; opacity:.85; }
+  .gallery h2 { letter-spacing:.08em; }
+  .ending h2 { letter-spacing:.045em; }
+  #signature { letter-spacing:.12em; }
+  .countdown { padding-top:14px; border-top:1px solid var(--palette-metallic, #a61b1b24); }
+  .countdown strong { font-weight:400; }
+  .location-card { border-radius:4px; }
+}
+@media screen and (max-width:600px) and (min-height:740px) {
+  .cover h1 { font-size:clamp(46px,6.3svh,58px); letter-spacing:.06em; margin:8px 0; }
+  .cover .couple { margin:12px 0 10px; font-size:28px; }
+  .cover-photo { height:41svh; margin:18px 0 14px; }
+  .cover .meta { font-size:14px; gap:7px; line-height:1.65; }
+  .cover .primary { margin-top:14px; padding-inline:30px; }
+  .gallery h2 { font-size:34px; margin:14px 0 12px; }
+  #galleryIntro { margin:6px 0 16px; line-height:1.8; }
+  .projector-window { margin-top:16px; }
+  #galleryList.projector-track { height:46svh; }
+  .ticket .card { min-height:82svh; padding:28px 24px; }
+  .card h2 { font-size:34px; margin:12px 0 18px; }
+  .card dl { margin:6px 0 14px; }
+  .card dl div { padding:12px 0; }
+  .location-card { margin:10px 0 18px; }
+  .countdown { margin-top:10px; padding-top:18px; }
+  .ending h2 { font-size:29px; margin:14px 0 18px; }
+  .ending-photo { height:49svh; margin:8px 0 24px; }
+  #signature { margin:6px 0 0; }
+}

@@ -1,0 +1,34 @@
+# Local OS/editor state
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+
+# Generated invitations and exports
+output/
+outputs/
+exports/
+dist/
+private/
+local/
+site/
+*.zip
+*.pdf
+invitation.json
+
+# Credentials and deployment state
+.env
+.env.*
+*.pem
+*.key
+.wrangler/
+.cloudflare/
+.netlify/
+.vercel/
+playwright-report/
+test-results/
+*.log

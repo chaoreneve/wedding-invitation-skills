@@ -1,0 +1,10 @@
+{
+  "name": "wedding-invitation-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Classic and witness wedding invitation skills; private review edition",
+  "license": "UNLICENSED",
+  "engines": {"node": ">=20"},
+  "scripts": {"verify": "python3 tools/verify.py"},
+  "devDependencies": {"playwright": "1.65.0"}
+}

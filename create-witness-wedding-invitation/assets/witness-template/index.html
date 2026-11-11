@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>见证者模式 · 婚礼邀请</title>
+    <meta name="description" content="一封等待见证者亲启的婚礼来信" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="见证者模式 · 婚礼邀请" />
+    <meta property="og:description" content="一封等待见证者亲启的婚礼来信" />
+    <meta property="og:image" content="./assets/og-witness-letter.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./witness.css" />
+  </head>
+  <body class="invite-page witness-page" data-mode="witness">
+    <div class="top-controls" aria-label="页面控制">
+      <button class="icon-button menu-button ripple-target" type="button" aria-label="打开菜单" aria-expanded="false">☰</button>
+      <button class="icon-button sound-button ripple-target" type="button" aria-label="开启音乐" aria-pressed="false" hidden>♪</button>
+    </div>
+    <nav class="nav-drawer" aria-label="见证者模式导航">
+      <a href="#secret-letter">神秘来信</a>
+      <a href="#identity-check">确认身份</a>
+      <a href="#personal-letter">专属来信</a>
+      <a href="#hall-01">放映厅</a>
+      <a href="#mission">见证任务</a>
+    </nav>
+    <main class="screen-stack">
+      <section class="scene witness-cover" id="secret-letter">
+        <div class="scene-inner envelope-layout">
+          <p class="eyebrow">Secret Letter</p>
+          <h1 class="secret-letter-title" data-copy="coverTitle">一封神秘的来信</h1>
+          <button class="envelope-card mysterious-letter-card ripple-target" type="button" data-envelope-open data-next="#identity-check" aria-label="开启神秘来信">
+            <div class="envelope-flap"></div>
+            <div class="wax-seal ornate-seal" aria-label="玫瑰信封封印">
+              <svg class="rose-seal-icon" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+                <path d="M605.577 573.33l-24.754-10.439c-8.798-137.788-25.5-198.183-84.701-235.612-17.447-11.333-51.149-63.824-70.534-69.043 5.219-7.009 134.806-65.763 178.2-84.553 13.571 50.254 33.851 118.85 59.5 184.911 52.044 133.911-57.711 214.736-57.711 214.736zM852.374 586.154c-45.631 59.052 13.868 103.788-41.606 175.367-14.017 18.043-28.93 33.85-43.991 47.122-10.14 0.149-18.938-2.386-25.947-7.755-32.508-25.35-13.868-103.788 41.606-175.366 14.166-18.343 33.254-35.044 53.385-49.211 17.299-4.473 25.65-1.938 16.553 9.843zM640.472 771.662c0 16.254-11.483 31.315-30.868 43.543-9.395 0.745-18.939 1.193-28.78 1.193-90.666 0-89.473-74.561-164.034-74.561-25.202 0 1.193-23.561 45.035-44.14h0.149c4.92-0.447 9.692-0.596 14.464-0.596 90.667 0 164.034 33.403 164.034 74.561z" fill="#E27E47"></path>
+                <path d="M580.674 578.698c-54.28-0.745-163.121-16.993-203.7-120.789-34.746-88.876-49.658-103.788-94.394-148.525 144.051-23.561 341.936-98.569 298.094 269.314z" fill="#E27E47"></path>
+                <path d="M342.818 203.782v44.736c65.071 0 114.431 18.432 146.708 54.784 43.708 49.225 60.127 133.293 48.887 250.069l-57.957 25.132c-3.394 0.184-8.088 0.357-13.765 0.357-117.217 0-154.832-57.067-166.839-91.134-30.292-85.633-68.811-168.051-93.214-217.401 18.983-5.652 42.641-11.675 68.549-15.957 23.724-3.88 46.474-5.849 67.616-5.85l0.015-44.736m-0.016 0c-25.824 0.001-51.255 2.579-74.835 6.436-70.386 11.632-124.517 34.746-124.517 34.746s67.702 126.157 114.228 257.682c38.292 108.647 157.128 120.951 209.014 120.951 15.199 0 24.66-1.057 24.66-1.057l88.728-38.474c0.298-1.789 0.447-3.579 0.596-5.368 36.663-307.662-105.941-374.922-237.874-374.916z" fill="#fff1dc"></path>
+                <path d="M553.57 158.757a2316.936 2316.936 0 0 0 7.028 26.589c19.047 70.534 39.566 134.271 60.992 189.454 34.178 87.943-21.179 144.319-38.409 159.138l-2.717 1.014c-3.823-97.474-24.543-175.403-61.745-232.055-13.382-20.587-29.33-38.838-47.552-54.375a233.188 233.188 0 0 0-29.158-21.018c36.687-31.515 79.871-54.428 111.561-68.747m31.28-60.529s-145.692 46.228-218.91 145.096c27.289 7.307 53.236 19.833 76.35 39.367 14.166 12.079 27.289 26.693 38.921 44.588 35.938 54.727 58.009 138.683 54.877 264.243l-58.455 28.333 0.895 0.895 115.867-43.246 11.184-4.175s109.754-80.825 57.711-214.736c-25.649-66.061-45.93-134.657-59.5-184.911-12.23-45.182-18.94-75.454-18.94-75.454z" fill="#fff1dc"></path>
+                <path d="M391.187 163.407c16.335 0 31.63 4.469 43.647 12.663-13.123 9.692-25.799 20.43-37.728 31.912-17.748-2.863-35.863-4.138-53.798-4.139a395.9 395.9 0 0 0-30.009 1.156c9.693-15.509 25.649-28.632 45.93-35.939 10.688-3.833 21.535-5.653 31.958-5.653m0.001-44.737c-15.911 0-31.745 2.786-47.063 8.28-28.985 10.443-53.384 29.733-68.762 54.338l-46.894 75.031 88.225-6.713a352.51 352.51 0 0 1 26.614-1.027c16.297 0 32 1.2 46.673 3.567l22.054 3.558 16.095-15.492c10.596-10.199 21.794-19.672 33.283-28.158l50.695-37.443-52.072-35.504c-19.609-13.37-43.416-20.437-68.848-20.437zM729.884 928.219a22.185 22.185 0 0 1-15.757-6.531c-1.646-1.638-17.322-17.745-61.731-76.956l-7.638-10.063c-22.856-29.941-46.491-60.901-56.175-118.977-13.66-81.937-56.911-135.578-57.348-136.11-7.806-9.546-6.437-23.635 3.095-31.463 9.509-7.842 23.577-6.51 31.426 3.014 2.09 2.519 51.231 62.882 66.952 157.204 7.857 47.11 26.278 71.241 47.613 99.186l7.871 10.369c42.414 56.554 57.501 72.092 57.646 72.245 8.621 8.789 8.556 22.929-0.197 31.594a22.33 22.33 0 0 1-15.757 6.488z" fill="#fff1dc"></path>
+                <path d="M476.438 741.837c65.171 0 105.516 18.727 117.054 29.696-1.697 1.584-4.203 3.593-7.735 5.82-18.518 11.666-56.96 24.132-109.319 24.132-30.097 0-41.629-10.612-60.735-28.193-5.072-4.668-10.59-9.746-16.773-14.774 19.977-7.631 42.738-14.067 64.816-16.085h0.255l2.019-0.183c3.101-0.282 6.412-0.413 10.418-0.413m0-44.736c-4.772 0-9.544 0.149-14.464 0.596h-0.149c-88.131 7.158-191.771 73.965-149.42 73.965 74.561 0 73.368 74.561 164.034 74.561 54.877 0 103.341-12.228 133.166-31.018 19.386-12.228 30.868-27.289 30.868-43.543-0.001-41.158-73.368-74.561-164.035-74.561z" fill="#fff1dc"></path>
+                <path d="M788.972 646.709c0.185 7.908 0.806 15.329 1.377 22.152 2.166 25.876 3.473 41.495-14.909 65.215-11.942 15.371-24.807 29.167-38.225 40.99-26.652 23.465-47.031 31.72-57.145 33.318-1.589-15.88 8.332-59.209 48.242-110.705 15.08-19.442 38.141-37.21 60.66-50.97m59.918-72.471c-3.367 0-7.804 0.712-13.069 2.074-34.745 8.799-105.727 46.079-142.858 93.947-55.474 71.578-74.114 150.016-41.606 175.366 6.883 5.288 15.474 7.8 25.274 7.8 25.02 0 57.893-16.386 90.146-44.782 15.061-13.272 29.974-29.079 43.991-47.122 55.474-71.579-4.026-116.316 41.606-175.367 6.329-8.196 4.214-11.917-3.484-11.916zM591.228 615.637l18.639 59.322 42.055-45.803-60.694-13.519z" fill="#fff1dc"></path>
+                <path d="M658.755 834.616l-15.637 60.943 60.596-16.93-44.959-44.013z" fill="#fff1dc"></path>
+              </svg>
+            </div>
+            <span>Personal · Please Open By Yourself</span>
+          </button>
+          <p class="small-note" data-copy="coverNote">这封信，仅限本人亲启。</p>
+          <button class="primary-button ripple-target" type="button" data-next="#identity-check">开启</button>
+        </div>
+      </section>
+      <section class="scene identity-scene" id="identity-check">
+        <div class="scene-inner identity-layout">
+          <p class="eyebrow">Identity Check</p>
+          <form class="identity-paper" data-identity-form>
+            <h2>请确认你的身份</h2>
+            <label class="field-label">请输入你的名字<input type="text" name="guestName" autocomplete="name" placeholder="你的名字" /></label>
+            <div class="choice-stack" role="radiogroup" aria-label="身份确认">
+              <label data-identity-choice="self"><input type="radio" name="identity" value="self" checked /> <span>我就是本人</span></label>
+              <label data-identity-choice="other"><input type="radio" name="identity" value="other" /> <span>不是本人</span></label>
+            </div>
+            <button class="primary-button ripple-target" type="submit">确认身份</button>
+            <p class="identity-alert" data-identity-alert role="status" aria-live="polite" hidden></p>
+            <div class="identity-reveal" role="status" aria-live="polite">
+              <div class="identity-reveal-seal" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <strong>身份已确认</strong><small>信件正在展开</small>
+            </div>
+          </form>
+          <p class="small-note">确认后，信件将为你亲自展开。</p>
+        </div>
+      </section>
+      <section class="scene denied-scene" id="identity-denied" hidden>
+        <div class="scene-inner denied-layout">
+          <button class="sealed-envelope secret-seal-trigger ripple-target" type="button" data-passphrase-open aria-label="尝试暗号开启信件">
+            <span>!</span>
+          </button>
+          <h2>这封信，似乎并不愿意被别人打开。</h2>
+          <p>请找到真正的收件人。</p>
+          <form class="passphrase-panel" data-passphrase-form hidden>
+            <p class="passphrase-whisper">隐藏彩蛋已触发：专属神秘暗号出现，答对即可用「神秘人」身份亲启。</p>
+            <h3>天官赐福</h3>
+            <label class="field-label">请对下半句<input type="text" name="passphrase" autocomplete="off" placeholder="输入暗号答案" /></label>
+            <p class="passphrase-result" data-passphrase-result role="status" aria-live="polite"></p>
+            <button class="primary-button ripple-target" type="submit">尝试开启</button>
+          </form>
+          <button class="primary-button ripple-target" type="button" data-next="#identity-check">我找到本人了</button>
+        </div>
+      </section>
+      <section class="scene letter-scene witness-letter-scene" id="personal-letter">
+        <div class="scene-inner letter-layout">
+          <p class="eyebrow">Personal Letter</p>
+          <article class="paper-letter">
+            <span class="stamp" data-letter-stamp>Witness</span>
+            <h2 data-letter-greeting>亲爱的亲友：</h2>
+            <div class="letter-copy" data-letter-copy></div>
+            <p class="signature" data-letter-signature></p>
+          </article>
+          <button class="primary-button ripple-target" type="button" data-next="#hall-01">进入放映厅</button>
+        </div>
+      </section>
+      <section class="scene memory-scene" id="hall-01">
+        <article class="scene-inner gallery-panel projector-panel projector-theater witness-projector" data-projector>
+          <header class="scene-heading projector-heading"><h2 data-copy="galleryTitle">爱的放映厅</h2></header>
+          <p class="story-copy" data-copy="galleryIntro"></p>
+          <div class="projector-gallery" aria-label="自动放映照片集">
+            <div class="projector-window projector-window-large" aria-label="连续播放胶片"><div class="film-strip" data-projector-track></div></div>
+          </div>
+          <button class="primary-button projector-mission-button ripple-target" type="button" data-next="#mission">领取见证任务</button>
+        </article>
+      </section>
+      <section class="scene mission-scene" id="mission">
+        <div class="scene-inner mission-layout">
+          <p class="eyebrow">Mission Received</p>
+          <article class="mission-paper">
+            <div class="mission-topline"><h2>Mission Received</h2><span>Top Secret</span></div>
+            <div class="mission-id-card"><span>Witness ID</span><strong data-mission-code></strong></div>
+            <dl class="mission-details">
+              <div><dt>Role</dt><dd data-mission-role></dd></div>
+              <div><dt>Date</dt><dd data-field="date"></dd></div>
+              <div><dt>Time</dt><dd data-field="time"></dd></div>
+              <div><dt>Venue</dt><dd data-field="venue"></dd></div>
+              <div><dt>Addr.</dt><dd data-field="address"></dd></div>
+              <div><dt>Dress</dt><dd data-field="dresscode"></dd></div>
+            </dl>
+            <section class="mission-timeline" aria-label="婚礼时间轴"><span>Timeline</span><ol data-mission-timeline></ol></section>
+            <div class="mission-proof">
+              <figure class="mission-proof-photo photo-filled" role="button" tabindex="0" data-lightbox="" data-caption="" data-lightbox-src="./assets/placeholder.svg">
+                <img data-mission-proof-image src="./assets/placeholder.svg" alt="见证任务合照" decoding="async" />
+              </figure>
+              <ul class="mission-list" data-mission-list></ul>
+            </div>
+            <button class="primary-button stamp-button ripple-target" type="button" data-next="#mission-accepted">接受任务 ✓</button>
+          </article>
+        </div>
+      </section>
+      <section class="scene accepted-scene" id="mission-accepted" hidden>
+        <div class="scene-inner accepted-layout">
+          <p class="eyebrow">Mission Accepted</p>
+          <figure class="accepted-photo photo-filled" role="button" tabindex="0" data-lightbox="" data-caption="" data-lightbox-src="./assets/placeholder.svg">
+            <img data-accepted-image src="./assets/placeholder.svg" alt="新人合照" decoding="async" /><figcaption>Starring · Us</figcaption>
+          </figure>
+          <h2>Mission Accepted.<span class="accepted-inline-check" aria-hidden="true">✓</span></h2>
+          <p>谢谢你，<span data-guest-name>亲友</span></p><p>你已成功接受见证任务。</p>
+          <div class="accepted-event-card"><time data-field="date"></time><span data-field="venue"></span></div>
+          <p>我们现场见！</p>
+        </div>
+      </section>
+    </main>
+    <div class="lightbox" data-lightbox-modal hidden>
+      <button class="icon-button lightbox-close ripple-target" type="button" aria-label="关闭">×</button>
+      <div class="lightbox-card"><div class="photo-frame photo-frame-large photo-filled"><img data-lightbox-image alt="" /></div><h2 data-lightbox-title>照片标题</h2><p data-lightbox-caption>照片说明</p></div>
+    </div>
+    <script src="./config.js"></script>
+    <script src="./witness.js"></script>
+  </body>
+</html>

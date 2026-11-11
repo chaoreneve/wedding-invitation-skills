@@ -1,0 +1,4 @@
+interface:
+  display_name: "见证者模式婚礼请柬"
+  short_description: "制作带神秘来信、照片放映和见证任务的互动婚礼请柬"
+  default_prompt: "使用 $create-witness-wedding-invitation 陪我一步步制作见证者模式婚礼请柬，先从通用版开始。"

@@ -1,0 +1,25 @@
+.controls {
+  right: 14px;
+  top: 14px;
+}
+
+.controls button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #ffffff70;
+  background: #211a17b8;
+  color: #fff;
+  font: 500 15px/1 system-ui, sans-serif;
+  box-shadow: 0 4px 14px #160c0838;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: color .2s, border-color .2s, box-shadow .2s, background .2s;
+}
+
+.controls button[aria-pressed="true"] {
+  color: #f2d98f;
+  border-color: #f2d98faa;
+  background: #211a17c7;
+  box-shadow: 0 3px 12px #160c0838, 0 0 0 2px #f2d98f1f;
+}
