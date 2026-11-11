@@ -32,7 +32,7 @@ For natural-language color requests, choose matching surface, dark surface, acce
 
 ## `classic`
 
-Restrained warm ivory vintage-paper gallery theme. Use for Western style. Before generation, ask whether the user prefers Western or Chinese style when no style or palette has been supplied; Western maps to `classic`, Chinese maps to `chinese-red-paper`. Honor freely requested custom colors without requiring the user to choose from a palette menu.
+Restrained warm ivory vintage-paper gallery theme, without concentric ripples or ripple animation. Use for Western style. Before generation, ask whether the user prefers Western or Chinese style when no style or palette has been supplied; Western maps to `classic`, Chinese maps to `chinese-red-paper`. Honor freely requested custom colors without requiring the user to choose from a palette menu.
 
 ## `chinese-red-paper`
 
