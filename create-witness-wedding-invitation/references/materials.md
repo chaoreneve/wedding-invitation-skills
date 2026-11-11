@@ -1,0 +1,9 @@
+# Bundled materials and redistribution
+
+The bundled recording is **Canon in D Major**, Kevin MacLeod (incompetech.com), ISRC USUAN1100301, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100301 . ID3 tags and embedded artwork were removed, and the recording was transcoded to 96 kbps MP3 for mobile use. Keep the author, track title, source, license link and modification notice when sharing or adapting it. This recording allows commercial use under that license; do not repeat the retired BGM's non-commercial restriction.
+
+The warm paper derives from ambientCG [Paper001](https://ambientcg.com/view?id=Paper001) and [Paper002](https://ambientcg.com/view?id=Paper002), both [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). The original color maps are combined and tinted with CSS before rendering. The new envelope/rose artwork, geometric ripple and photo placeholder are CC0. See the bundled NOTICES.txt for provenance; do not use old textures or audio from a prior local project.
+
+Every generated site includes an accessible `materials.html` page via the small “素材说明” link. Its `assets/NOTICES.txt` and `assets/licenses/CC-BY-4.0.txt`, `CC0-1.0.txt` must remain in the hosting ZIP, even when music is muted or replaced. The MP3 is included in the ZIP only when used. PNG/PDF exports have no audio, so no music credit is required in their visual composition; the CC0 textures require no attribution.
+
+An explicitly empty `media.music` disables the default. A user-supplied replacement must be cleared separately; record any required credit for that track in materials.html and NOTICES.txt before publication. The bundled notice does not authorize user photos, letters, or replacement music. Keep the origin and license links public; never add account data or actual guest details to reusable notices.

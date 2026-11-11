@@ -11,7 +11,7 @@ html[data-theme="chinese-red-paper"] .cover {
   color: #fff4d8;
   background:
     linear-gradient(145deg, #94151bd0, #5d080dde),
-    url("./assets/vintage-paper-bg.jpg") center / cover no-repeat;
+    url("./assets/paper-warm.jpg") center / cover no-repeat;
   background-blend-mode: multiply;
 }
 
@@ -29,7 +29,7 @@ html[data-theme="chinese-red-paper"] .cover::before {
 html[data-theme="chinese-red-paper"] .cover::after {
   background:
     radial-gradient(circle at 50% 42%, transparent 0 38%, #2400042b 72%, #1700037a 100%),
-    url("./assets/vintage-paper-bg.jpg") center / cover no-repeat;
+    url("./assets/paper-warm.jpg") center / cover no-repeat;
   background-blend-mode: multiply, soft-light;
   mix-blend-mode: soft-light;
   opacity: .28;
@@ -63,7 +63,7 @@ html[data-theme="chinese-red-paper"] .gallery {
   color: #fff4df;
   background:
     linear-gradient(#43070ceb, #290306f2),
-    url("./assets/vintage-paper-bg.jpg") center / cover fixed;
+    url("./assets/paper-warm.jpg") center / cover fixed;
 }
 
 html[data-theme="chinese-red-paper"] .gallery .eyebrow {
@@ -91,7 +91,7 @@ html[data-theme="chinese-red-paper"] .card dl div {
 html[data-theme="chinese-red-paper"] .ending {
   background:
     linear-gradient(#f7ead2e6, #e8c891e8),
-    url("./assets/vintage-paper-bg.jpg") center / cover;
+    url("./assets/paper-warm.jpg") center / cover;
 }
 
 html[data-theme="chinese-red-paper"] .ending h2 {
@@ -107,7 +107,7 @@ html[data-theme="chinese-red-paper"] .ending-photo {
     color: #fff4d8;
     background:
       linear-gradient(145deg, #94151bd0, #5d080dde),
-      url("./assets/vintage-paper-bg.jpg") center / cover no-repeat;
+      url("./assets/paper-warm.jpg") center / cover no-repeat;
     background-blend-mode: multiply;
   }
 

@@ -1,0 +1,26 @@
+THIRD-PARTY MATERIALS
+
+Default recording: Canon in D Major — Kevin MacLeod (incompetech.com)
+ISRC: USUAN1100301
+Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100301
+Recording licensed under Creative Commons Attribution 4.0 International.
+https://creativecommons.org/licenses/by/4.0/
+Changes: removed ID3 metadata and embedded artwork; transcoded to 96 kbps MP3 for mobile use; renamed canon-in-d-major.mp3.
+Retain attribution, the license link and notices when redistributing or adapting the recording.
+The default recording permits commercial use under that license; no non-commercial restriction is added.
+A replacement track requires its own permission and attribution.
+
+Paper textures: Paper001 and Paper002 — ambientCG / Lennart Demes.
+https://ambientcg.com/view?id=Paper001
+https://ambientcg.com/view?id=Paper002
+https://docs.ambientcg.com/license/
+CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
+Changes: color maps combined, tinted warm ivory with CSS and rendered as paper-warm.jpg.
+The red and ivory appearances are additional CSS color treatments.
+
+Geometric rose seal, envelope-share composition, ripple effect and photo placeholder:
+new vector/CSS artwork for Wedding Invitation Skills, dedicated under CC0 1.0.
+Envelope render uses the CC0 paper above. Rebuild source: tools/build-assets.mjs.
+
+This notice covers bundled assets only, not user photos, text or replacement music.
+Full license texts: assets/licenses/CC-BY-4.0.txt and assets/licenses/CC0-1.0.txt.

@@ -37,7 +37,7 @@
   .cover {
     color: #30231d;
     background: linear-gradient(#f4eadac7, #efe0cbd4),
-      url("./assets/vintage-paper-bg.jpg") center / cover;
+      url("./assets/paper-warm.jpg") center / cover;
   }
 
   .cover-photo,

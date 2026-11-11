@@ -224,7 +224,7 @@ a {
 }
 
 .witness-page {
-  --witness-paper-texture: url("./assets/背景1.jpg");
+  --witness-paper-texture: url("./assets/paper-warm.jpg");
   --ink: #53362f;
   --ink-deep: #2f2420;
   --blue: #9b554e;
@@ -367,7 +367,7 @@ a {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(211, 236, 248, 0.18)),
-    url("./assets/water-ripple-bg.png") center / cover no-repeat,
+    repeating-radial-gradient(ellipse at 50% 35%, transparent 0 26px, rgba(255,255,255,0.3) 28px 29px, transparent 32px 68px) center / cover no-repeat,
     linear-gradient(180deg, #f9fdff 0%, #e9f6fc 46%, #b7ddf0 100%);
 }
 

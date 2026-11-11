@@ -1,25 +1,30 @@
-# 素材来源与授权核对
+# 素材许可与替换记录
 
-状态含义：“待确认”表示没有随附可核实的权利人授权或许可证，不能仅凭出现在原项目中推定允许公开再分发。当前保留原素材以便私有审阅和验证，暂不声明拥有其版权。
+当前工作树中的默认媒体已完成替换：纸纹为 CC0，音乐为 CC BY 4.0，新绘制的基础装饰为 CC0。各 skill 自带完整素材说明和许可文本，可独立安装，不依赖仓库根目录。代码许可状态另见 [LICENSE.md](LICENSE.md)。
 
-以下路径相对于对应 skill 的 `assets/` 目录。
+| 素材 | 当前来源与许可 | 改动及再分发要求 |
+| --- | --- | --- |
+| 两版 `assets/paper-warm.jpg` | ambientCG / Lennart Demes 的 Paper001、Paper002；CC0 1.0 | 用 CSS 混合色图并调为暖纸色；允许免费修改、商用和再分发，不强制署名 |
+| 两版 `assets/canon-in-d-major.mp3` | Kevin MacLeod 的 Canon in D Major，ISRC USUAN1100301；CC BY 4.0 | 移除 ID3 与内嵌封面，转为适合手机加载的 96 kbps MP3；再分发时保留作者、来源、许可及修改说明 |
+| 见证者 `assets/og-witness-letter.png` | 项目重新绘制的信封、玫瑰线稿、封蜡，加上述 CC0 纸纹 | 新几何绘图采用 CC0 1.0；由 tools/build-assets.mjs 重建 |
+| 两版 `assets/placeholder.svg` | 项目重新绘制的基本几何照片占位 | CC0 1.0；不是实际人物照片 |
+| 见证者波纹 | CSS 重复径向渐变重新绘制 | CC0 1.0；不再使用原波纹图片 |
+| 文档预览图 | 虚构示例的网页截图 | 不含真实照片或宾客；底层新纸纹及装饰为 CC0，项目代码许可另见 LICENSE.md |
 
-| 素材 | 使用位置 | 当前可追溯来源 | 再分发授权 |
-| --- | --- | --- | --- |
-| `classic-template/assets/classic-bgm.mp3` | 经典版默认循环 BGM | 用户指定的经典参考项目 | **待确认**；现有“仅供个人非商业婚礼使用，请勿商用”说明不替代授权 |
-| `witness-template/assets/classic-bgm.mp3` | 见证者版默认循环 BGM | 同一经典参考项目 | **待确认**，与经典版为同一音频 |
-| `classic-template/assets/vintage-paper-bg.jpg` | 经典版纸纹 | 经典参考项目提供的纸纹 | **待确认** |
-| `witness-template/assets/vintage-paper-bg.jpg` | 见证者模板随附素材 | 同一纸纹 | **待确认** |
-| `witness-template/assets/背景1.jpg` | 见证者默认纸纹 | 原见证者实现 | **待确认** |
-| `witness-template/assets/water-ripple-bg.png` | 原版效果素材 | 原见证者实现 | **待确认** |
-| `witness-template/assets/og-witness-letter.png` | 默认微信信封分享图 | 原见证者实现中的信封图 | **待确认**；衍生图也需核对所用底图 |
-| 两版 `assets/placeholder.svg` | 无照片占位 | 随模板提供的图形占位 | 作者与许可待确认；不是实际新人照片 |
-| HTML、CSS、JS、Python、关系信件与说明 | 两个 skill 的实现 | 由既有项目整理及后续修改 | 权利范围与代码许可证待作者确认，见 LICENSE.md |
+## 原始来源和许可
 
-文件 SHA-256 可用 `shasum -a 256 <文件路径>` 或其他校验工具计算，以核对是否已替换；重复文件不代表取得了额外授权。截图只使用虚构文案和占位，不包含用户照片，但其底层纸纹的授权状态仍与上述素材一致。
+- [Paper001](https://ambientcg.com/view?id=Paper001)、[Paper002](https://ambientcg.com/view?id=Paper002)；[ambientCG 官方许可说明](https://docs.ambientcg.com/license/)明确允许原始文件随项目再分发。
+- [CC0 1.0 许可](https://creativecommons.org/publicdomain/zero/1.0/)，全文已随每个 skill 保存。
+- [Canon in D Major 作者页面](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100301)，该页按 ISRC 从作者的 pieces.json 加载曲目，并给出 Kevin MacLeod / CC BY 4.0 的署名说明。
+- [CC BY 4.0 许可](https://creativecommons.org/licenses/by/4.0/)，全文已随每个 skill 保存。许可允许免费再分发、改编和商业使用，但要求署名、许可链接及改动说明；没有附加非商业限制。
+- 新几何信封、玫瑰、占位和波纹绘图在本次替换中以 CC0 1.0 提供。该说明只覆盖新绘图，不把既有项目所有代码都标为 CC0。
 
-## 转公开前
+## 文件与构建
 
-逐项补充权利人、原始来源、许可证文本或允许再分发的书面依据，并核对是否需要署名、是否允许修改和用于此类发布。不能确认的素材应移除或替换为可明确再分发的素材，更新模板默认值并重新生成、校验与预览。BGM 可改为静音默认或使用已获授权的替代音轨。
+来源下载地址、原始录音校验值和处理命令见 [asset-sources/README.md](asset-sources/README.md)。当前文件 SHA-256 见 [asset-sources/SHA256.json](asset-sources/SHA256.json)。音乐移除了标签与嵌入封面，整曲转为 96 kbps MP3，未截短乐曲。纸纹及信封以浏览器渲染的 CSS／SVG 重建，未沿用旧图片中的像素。
 
-如果私有历史中已有不能公开的素材，不能只在后续提交删除后直接转公开：应从已审核文件重新建立干净的公开仓库，或完成历史清理并检查全部可达提交。代码许可证仅在权利范围确认后添加，不覆盖未取得授权的素材。
+生成网站含“素材说明”入口，指向 materials.html；发布包必须包含 assets/NOTICES.txt 和 assets/licenses/ 下的许可全文。校验和打包脚本会检查这些文件。替换音乐后，替换曲目的授权与署名需另行处理，默认音乐的许可不能替代它。
+
+## 尚未转公开的原因
+
+旧素材已经从当前工作树中移除，但仍存在于私有仓库的既有历史。当前更新不会擅自改写已上传历史或切换可见性。真正公开前需决定项目代码许可证，并从审核后的文件创建干净公开历史，或在明确授权后清理旧历史；不能仅靠最新一次提交删除素材来完成公开清理。

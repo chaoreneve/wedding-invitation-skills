@@ -34,10 +34,10 @@ Available relationship names and codes (derived from the original witness invita
 - `privacy.noindex`: default true; it is not access control.
 - `sharing.url`: optional final public HTTPS URL for this recipient version. Once assigned, set it and regenerate so the initial HTML contains a public absolute `og:image` for link previews.
 - `media.gallery`: list of `{src,largeSrc,title,caption,alt,wide}`; `largeSrc` is optional. `title` and `caption` are optional visible lightbox copy: omit them when there is no meaningful photo-specific wording, while keeping `alt` descriptive for accessibility. An empty gallery is suitable for preview, not a finished shareable invitation unless the user explicitly approves a photo-free version.
-- `media.share`: optional override for the link-preview image. When omitted, use the bundled original sealed-envelope image, even if gallery photos exist.
+- `media.share`: optional override for the link-preview image. When omitted, use the bundled newly drawn sealed-envelope image, even if gallery photos exist.
 - `media.missionProof`: optional image beside the mission checklist; defaults to the first gallery image.
 - `media.accepted`: optional final-scene image; defaults to the first gallery image, independently of the link-preview image.
-- `media.music`: omit for bundled classic BGM, set `""` for silent mode, or supply a permitted replacement. The bundled BGM is personal non-commercial use only.
+- `media.music`: omit for bundled classic BGM, set `""` for silent mode, or supply a permitted replacement. The bundled Canon in D Major recording by Kevin MacLeod is CC BY 4.0; preserve its attribution, license and modification notice. Commercial use is allowed under the license; see materials.md.
 
 Only documented fields should enter the configuration. Keep private planning notes, account details and the batch guest list outside each public recipient site.
 

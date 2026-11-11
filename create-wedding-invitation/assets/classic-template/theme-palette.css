@@ -1,5 +1,5 @@
 /* Loaded after both preset and print CSS; applies to complete custom palettes. */
-html[data-palette] { --ink:var(--palette-text); --accent:var(--palette-accent); --paper:var(--palette-paper); --texture:url('./assets/vintage-paper-bg.jpg'); }
+html[data-palette] { --ink:var(--palette-text); --accent:var(--palette-accent); --paper:var(--palette-paper); --texture:url('./assets/paper-warm.jpg'); }
 html[data-palette][data-texture="none"] { --texture:none; }
 html[data-palette] .water { display:none; }
 html[data-palette] .cover {

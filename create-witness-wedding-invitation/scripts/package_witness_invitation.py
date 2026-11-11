@@ -11,7 +11,8 @@ from pathlib import Path
 
 RUNTIME_FILES = {
     "index.html", "config.js", "styles.css", "witness.css", "witness.js",
-    "assets/placeholder.svg", "assets/背景1.jpg", "assets/water-ripple-bg.png", "assets/og-witness-letter.png",
+    "assets/placeholder.svg", "assets/paper-warm.jpg", "assets/og-witness-letter.png", "materials.html",
+    "assets/NOTICES.txt", "assets/licenses/CC-BY-4.0.txt", "assets/licenses/CC0-1.0.txt",
 }
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"}
 PRIVATE_METADATA_MARKERS = (
@@ -57,7 +58,7 @@ def main() -> int:
         relative = Path(name)
         path = root / relative
         if (relative.is_absolute() or ".." in relative.parts or
-            (name not in RUNTIME_FILES and name != "assets/classic-bgm.mp3" and not name.startswith("assets/user/")) or
+            (name not in RUNTIME_FILES and name != "assets/canon-in-d-major.mp3" and not name.startswith("assets/user/")) or
             not path.resolve().is_relative_to(root) or path.is_symlink() or not path.is_file()):
             print(f"error: invalid release file: {name}", file=sys.stderr)
             return 1

@@ -15,7 +15,7 @@ export function posterHtml(data, baseUrl, { keepDateSeparator = false } = {}) {
   const gold = color(theme.metallic, red ? '#d4ad58' : '#8b3a3a');
   const names = data.couple.brideFirst ? [data.couple.bride, data.couple.groom] : [data.couple.groom, data.couple.bride];
   const photo = new URL(data.media.cover || './assets/placeholder.svg', baseUrl).href;
-  const texture = new URL('./assets/vintage-paper-bg.jpg', baseUrl).href;
+  const texture = new URL('./assets/paper-warm.jpg', baseUrl).href;
   const timeline = (data.timeline || []).map(item => `<li>${esc(item.time)} · ${esc(item.label)}</li>`).join('');
   return `<!doctype html><html lang="zh-CN"><meta charset="UTF-8"><style>
   *{box-sizing:border-box}body{margin:0;width:720px;background:${bg};color:${fg};font-family:"Songti SC","Noto Serif SC",serif}

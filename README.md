@@ -9,7 +9,7 @@
 
 ## 当前发布状态
 
-这是供审阅的私有仓库。代码许可待作者确认，随附音乐及位图的再分发授权待核实，详见 [LICENSE.md](LICENSE.md) 和 [素材清单](ASSET_LICENSES.md)。当前仓库不应转公开或打包再分发，直到相应授权已确认或素材已替换。这里的“个人非商业使用”提示不是授权证明。
+这是供审阅的私有仓库。当前默认媒体已替换为可再分发的素材：CC0 纸纹与新绘装饰，以及 Kevin MacLeod 的 CC BY 4.0 卡农录音。生成网页和发布包会保留署名及许可。详见 [素材清单](ASSET_LICENSES.md)。项目代码的最终许可证仍待确认，旧素材仍存在于私有历史；处理这两项后再转公开，见 [LICENSE.md](LICENSE.md)。
 
 仓库只包含模板、脚本、说明和虚构示例，不包含任何实际婚礼项目、宾客名单、登录资料或个人部署链接。
 
@@ -69,8 +69,10 @@ node create-wedding-invitation/scripts/export_invitation.mjs --site output/class
 python3 tools/verify.py
 ```
 
+安装 Playwright 后，运行 `node tools/browser-verify.mjs` 可验证两版手机页面、音乐循环与暂停、相册拖动及见证者流程；只使用虚构信息，报告保存在被忽略的 output/。可用 WEDDING_BROWSER_PATH 指定现有浏览器。
+
 验证会在临时目录生成并校验两版、检查姓名顺序与主题配置、默认信封分享图、未知字段拒绝和 ZIP 内容。测试不登录服务、不上传网页。浏览器中的手机比例、纸纹、轮播拖动、音乐、见证者完整流程仍需按各 skill 的检查指引实际预览。修改时更新两个 skill 各自的源文件；不要复制生成的实际请柬回模板。
 
 可选的 GitHub Actions 检查模板位于 `tools/verify-workflow.example.yml`。仓库当前未启用工作流；拥有相应工作流写入权限时，可将模板复制到 `.github/workflows/verify.yml`。本地验证不受影响。
 
-示例配置见 [examples](examples/)，脱敏预览见 [docs/previews](docs/previews/)；素材状态与后续公开前必须完成的事项见 [ASSET_LICENSES.md](ASSET_LICENSES.md)。
+示例配置见 [examples](examples/)，脱敏预览见 [docs/previews](docs/previews/)；素材来源与重建方法见 [asset-sources](asset-sources/)。运行 `node tools/build-assets.mjs` 可重建纸纹和信封。公开前仍需完成的事项见 [ASSET_LICENSES.md](ASSET_LICENSES.md)。

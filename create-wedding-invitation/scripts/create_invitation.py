@@ -34,7 +34,7 @@ DEFAULTS = {
 PRESET_DEFAULTS = {
     "chinese-red-paper": {"accent": "#a61b1b", "paper": "#f7ead2"},
 }
-DEFAULT_MUSIC = "./assets/classic-bgm.mp3"
+DEFAULT_MUSIC = "./assets/canon-in-d-major.mp3"
 ALLOWED_FIELDS = {
     "": {"couple", "event", "timeline", "copy", "theme", "privacy", "media", "sharing"},
     "couple": {"groom", "bride", "brideFirst"},
