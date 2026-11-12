@@ -1,5 +1,7 @@
 # Bundled materials and redistribution
 
+Current classic exception: at the user's request, assets/paper-warm.jpg is the original classic-project paper again. Its permission to redistribute is unverified; it is NOT CC0. Preserve assets/PAPER_OVERRIDE.txt and the exception in materials.html/NOTICES.txt. Keep this version private until cleared or replaced. The CC0 papers described below remain alternatives; that paragraph does not license the restored background.
+
 The bundled recording is **Canon in D Major**, Kevin MacLeod (incompetech.com), ISRC USUAN1100301, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100301 . ID3 tags and embedded artwork were removed, and the recording was transcoded to 96 kbps MP3 for mobile use. Keep the author, track title, source, license link and modification notice when sharing or adapting it. This recording allows commercial use under that license; do not repeat the retired BGM's non-commercial restriction.
 
 The warm paper derives from ambientCG [Paper001](https://ambientcg.com/view?id=Paper001) and [Paper002](https://ambientcg.com/view?id=Paper002), both [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). The original color maps are combined and tinted with CSS before rendering. The new envelope/rose artwork, geometric ripple and photo placeholder are CC0. See the bundled NOTICES.txt for provenance; do not use old textures or audio from a prior local project.

@@ -17,7 +17,7 @@ RUNTIME_FILES = {
     "styles.css", "print.css", "composition.css", "gallery-player.css",
     "location-card.css", "mobile-pages.css", "music-control.css",
     "theme-palette.css", "theme-presets.css",
-    "assets/placeholder.svg", "assets/paper-warm.jpg", "materials.html",
+    "assets/placeholder.svg", "assets/paper-warm.jpg", "assets/PAPER_OVERRIDE.txt", "materials.html",
     "assets/NOTICES.txt", "assets/licenses/CC-BY-4.0.txt", "assets/licenses/CC0-1.0.txt",
 }
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"}

@@ -1,10 +1,11 @@
 # 素材许可与替换记录
 
-当前工作树中的默认媒体已完成替换：纸纹为 CC0，音乐为 CC BY 4.0，新绘制的基础装饰为 CC0。各 skill 自带完整素材说明和许可文本，可独立安装，不依赖仓库根目录。代码许可状态另见 [LICENSE.md](LICENSE.md)。
+经典版现按用户要求恢复原项目纸纹，其再分发授权仍待确认，不属于 CC0，须保持私有。见证者纸纹仍为 CC0，音乐为 CC BY 4.0，新绘制的基础装饰为 CC0。各 skill 自带说明和许可，代码许可状态另见 [LICENSE.md](LICENSE.md)。
 
 | 素材 | 当前来源与许可 | 改动及再分发要求 |
 | --- | --- | --- |
-| 两版 `assets/paper-warm.jpg` | ambientCG / Lennart Demes 的 Paper001、Paper002；CC0 1.0 | 用 CSS 混合色图并调为暖纸色；允许免费修改、商用和再分发，不强制署名 |
+| 经典版 `assets/paper-warm.jpg` | 恢复的原经典项目纸纹；再分发授权待确认 | 非 CC0，SHA-256 及例外见 assets/PAPER_OVERRIDE.txt，保持私有 |
+| 见证者 `assets/paper-warm.jpg` 与仓库替代纸纹 | ambientCG / Lennart Demes 的 Paper001、Paper002；CC0 1.0 | CSS 混合色图并调为暖纸色；允许免费修改、商用和再分发，不强制署名 |
 | 两版 `assets/canon-in-d-major.mp3` | Kevin MacLeod 的 Canon in D Major，ISRC USUAN1100301；CC BY 4.0 | 移除 ID3 与内嵌封面，转为适合手机加载的 96 kbps MP3；再分发时保留作者、来源、许可及修改说明 |
 | 见证者 `assets/og-witness-letter.png` | 项目重新绘制的信封、玫瑰线稿、封蜡，加上述 CC0 纸纹 | 新几何绘图采用 CC0 1.0；由 tools/build-assets.mjs 重建 |
 | 两版 `assets/placeholder.svg` | 项目重新绘制的基本几何照片占位 | CC0 1.0；不是实际人物照片 |
@@ -21,7 +22,7 @@
 
 ## 文件与构建
 
-来源下载地址、原始录音校验值和处理命令见 [asset-sources/README.md](asset-sources/README.md)。当前文件 SHA-256 见 [asset-sources/SHA256.json](asset-sources/SHA256.json)。音乐移除了标签与嵌入封面，整曲转为 96 kbps MP3，未截短乐曲。纸纹及信封以浏览器渲染的 CSS／SVG 重建，未沿用旧图片中的像素。
+来源下载地址、原始录音校验值和处理命令见 [asset-sources/README.md](asset-sources/README.md)。可再分发文件的 SHA-256 见 [asset-sources/SHA256.json](asset-sources/SHA256.json)，恢复的经典纸纹校验值另见 assets/PAPER_OVERRIDE.txt。音乐转为 96 kbps MP3，未截短乐曲。见证者纸纹及信封由 CSS／SVG 重建；经典版现使用原项目纸纹。
 
 生成网站含“素材说明”入口，指向 materials.html；发布包必须包含 assets/NOTICES.txt 和 assets/licenses/ 下的许可全文。校验和打包脚本会检查这些文件。替换音乐后，替换曲目的授权与署名需另行处理，默认音乐的许可不能替代它。
 

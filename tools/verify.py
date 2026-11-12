@@ -154,7 +154,10 @@ class ReleaseChecks(unittest.TestCase):
         for skill, template in ((CLASSIC, "classic-template"), (WITNESS, "witness-template")):
             assets = skill / "assets" / template / "assets"
             for name in ("paper-warm.jpg", "canon-in-d-major.mp3"):
-                self.assertEqual(hashlib.sha256((assets / name).read_bytes()).hexdigest(), hashes[name])
+                expected = "ead90f8b0b8721e8cdbe2692af288ff057f54bc97ed167dec0cd959cd59c906a" if skill == CLASSIC and name == "paper-warm.jpg" else hashes[name]
+                self.assertEqual(hashlib.sha256((assets / name).read_bytes()).hexdigest(), expected)
+            if skill == CLASSIC:
+                self.assertIn("NOT covered by the CC0", (assets / "PAPER_OVERRIDE.txt").read_text())
             for retired in ("classic-bgm.mp3", "vintage-paper-bg.jpg", "背景1.jpg", "water-ripple-bg.png"):
                 self.assertFalse((assets / retired).exists(), retired)
 

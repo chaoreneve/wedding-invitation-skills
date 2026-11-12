@@ -1,6 +1,6 @@
 /** Rebuild paper, geometric envelope art and notices from documented CC0 sources. */
 import { chromium } from 'playwright';
-import { readFile, writeFile, mkdir, copyFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, copyFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -30,10 +30,12 @@ try {
   await page.locator('.envelope').screenshot({path:envelopePath});
   for (const target of targets) {
     await mkdir(path.join(target,'assets/licenses'),{recursive:true});
-    await copyFile(path.join(source,'paper-warm.jpg'),path.join(target,'assets/paper-warm.jpg'));
+    const privatePaper = await access(path.join(target,'assets/PAPER_OVERRIDE.txt')).then(()=>true,()=>false);
+    if(!privatePaper) await copyFile(path.join(source,'paper-warm.jpg'),path.join(target,'assets/paper-warm.jpg'));
     await writeFile(path.join(target,'assets/placeholder.svg'),placeholder);
-    await writeFile(path.join(target,'assets/NOTICES.txt'),notices);
-    await writeFile(path.join(target,'materials.html'),materials);
+    const exception = privatePaper ? await readFile(path.join(target,'assets/PAPER_OVERRIDE.txt'),'utf8') : '';
+    await writeFile(path.join(target,'assets/NOTICES.txt'),exception ? exception+'\nThe CC0 paper description below applies to the alternative source papers, not the restored classic background.\n\n'+notices : notices);
+    await writeFile(path.join(target,'materials.html'),privatePaper ? materials.replace('<h2>纸张与装饰</h2>','<h2>当前经典版纸纹：授权待确认</h2><p>本版本按用户要求恢复原项目纸纹，不属于 CC0 素材。再分发授权尚未确认，请保持私有；以下 CC0 纸纹是保留的替代方案。</p><h2>替代纸纹与其他装饰</h2>') : materials);
     for (const name of ['CC-BY-4.0.txt','CC0-1.0.txt']) await copyFile(path.join(source,name),path.join(target,'assets/licenses',name));
     await copyFile(path.join(source,'canon-in-d-major.mp3'),path.join(target,'assets/canon-in-d-major.mp3'));
   }
@@ -42,5 +44,5 @@ try {
   for(const name of files)hashes[name]=createHash('sha256').update(await readFile(path.join(source,name))).digest('hex');
   hashes['og-witness-letter.png']=createHash('sha256').update(await readFile(envelopePath)).digest('hex');
   await writeFile(path.join(source,'SHA256.json'),JSON.stringify(hashes,null,2)+'\n');
-  console.log('Built CC0 paper, original envelope composition, placeholders and license notices for both skills.');
+  console.log('Built licensed assets and notices; retained any explicitly marked private paper override.');
 } finally { await browser.close(); }
