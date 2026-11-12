@@ -1,26 +1,8 @@
-THIRD-PARTY MATERIALS
-
-Default recording: Canon in D Major — Kevin MacLeod (incompetech.com)
-ISRC: USUAN1100301
-Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100301
-Recording licensed under Creative Commons Attribution 4.0 International.
-https://creativecommons.org/licenses/by/4.0/
-Changes: removed ID3 metadata and embedded artwork; transcoded to 96 kbps MP3 for mobile use; renamed canon-in-d-major.mp3.
-Retain attribution, the license link and notices when redistributing or adapting the recording.
-The default recording permits commercial use under that license; no non-commercial restriction is added.
-A replacement track requires its own permission and attribution.
-
-Paper textures: Paper001 and Paper002 — ambientCG / Lennart Demes.
-https://ambientcg.com/view?id=Paper001
-https://ambientcg.com/view?id=Paper002
-https://docs.ambientcg.com/license/
-CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
-Changes: color maps combined, tinted warm ivory with CSS and rendered as paper-warm.jpg.
-The red and ivory appearances are additional CSS color treatments.
-
-Geometric rose seal, envelope-share composition, ripple effect and photo placeholder:
-new vector/CSS artwork for Wedding Invitation Skills, dedicated under CC0 1.0.
-Envelope render uses the CC0 paper above. Rebuild source: tools/build-assets.mjs.
-
-This notice covers bundled assets only, not user photos, text or replacement music.
-Full license texts: assets/licenses/CC-BY-4.0.txt and assets/licenses/CC0-1.0.txt.
+原项目素材：严禁商用。
+授权状态未确认。此标注不构成原作者的使用或再分发授权。
+Original project materials: commercial use strictly prohibited by project policy.
+Original creators and redistribution permission remain unverified; this is not a license grant.
+Default BGM: restored original classic-bgm.mp3; do not label it as Canon in D Major or CC BY.
+Original paper and envelope: not covered by the CC0 alternative-material notices.
+Keep the website, ZIP and repository private until the relevant permissions are confirmed.
+User photos and replacement tracks require their own permission.

@@ -95,7 +95,7 @@ class ReleaseChecks(unittest.TestCase):
             names = set(bundle.namelist())
             self.assertIn("assets/og-witness-letter.png", names)
             self.assertIn("index.html", names)
-            for required in ("materials.html", "assets/NOTICES.txt", "assets/licenses/CC-BY-4.0.txt", "assets/licenses/CC0-1.0.txt"):
+            for required in ("materials.html", "assets/NOTICES.txt", "assets/NOTICES.txt"):
                 self.assertIn(required, names)
             self.assertNotIn("invitation.json", names)
             self.assertFalse(any(".." in Path(name).parts or Path(name).is_absolute() for name in names))
@@ -119,7 +119,7 @@ class ReleaseChecks(unittest.TestCase):
             self.assertIn("index.html", bundle.namelist())
             self.assertNotIn("invitation.json", bundle.namelist())
             self.assertIn("materials.html", bundle.namelist())
-            self.assertIn("assets/licenses/CC-BY-4.0.txt", bundle.namelist())
+            self.assertIn("assets/NOTICES.txt", bundle.namelist())
 
     def test_default_music_and_license_enforcement(self):
         for skill, example, validator, packager in (
@@ -132,34 +132,30 @@ class ReleaseChecks(unittest.TestCase):
             config["media"]["gallery"] = [{"src": str(fixture), "alt": "检查用图形"}]
             site = self.generate(skill, config, example)
             data = json.loads((site / "invitation.json").read_text(encoding="utf-8"))
-            self.assertEqual(data["media"]["music"], "./assets/canon-in-d-major.mp3")
+            self.assertEqual(data["media"]["music"], "./assets/classic-bgm.mp3")
             run(skill / "scripts" / validator, site)
             archive = self.work / f"{example}-licensed.zip"
             run(skill / "scripts" / packager, site, "--output", archive)
             with zipfile.ZipFile(archive) as bundle:
-                self.assertIn("assets/canon-in-d-major.mp3", bundle.namelist())
+                self.assertIn("assets/classic-bgm.mp3", bundle.namelist())
                 self.assertIn("assets/NOTICES.txt", bundle.namelist())
                 notices = bundle.read("assets/NOTICES.txt").decode("utf-8")
-                self.assertIn("Kevin MacLeod", notices)
-                self.assertIn("https://creativecommons.org/licenses/by/4.0/", notices)
+                self.assertIn("严禁商用", notices)
+                self.assertIn("授权状态未确认", notices)
             (site / "assets/NOTICES.txt").unlink()
             run(skill / "scripts" / validator, site, succeeds=False)
             run(skill / "scripts" / packager, site, "--output", self.work / f"{example}-missing-credit.zip", succeeds=False)
 
-    def test_licensed_source_hashes_and_no_retired_assets(self):
-        hashes = json.loads((ROOT / "asset-sources/SHA256.json").read_text())
+    def test_original_asset_hashes(self):
+        hashes = json.loads((ROOT / "asset-sources/ORIGINAL_SHA256.json").read_text())
+        self.assertEqual(len(hashes), 6)
         for name, expected in hashes.items():
-            path = (WITNESS / "assets/witness-template/assets" / name) if name == "og-witness-letter.png" else (ROOT / "asset-sources" / name)
-            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), expected, name)
+            self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), expected, name)
+        original_music = "2a90743f9fb2cad7a74a2a01f309abb04a67d5c7eb7565bc315313bbbc7011b0"
         for skill, template in ((CLASSIC, "classic-template"), (WITNESS, "witness-template")):
             assets = skill / "assets" / template / "assets"
-            for name in ("paper-warm.jpg", "canon-in-d-major.mp3"):
-                expected = "ead90f8b0b8721e8cdbe2692af288ff057f54bc97ed167dec0cd959cd59c906a" if skill == CLASSIC and name == "paper-warm.jpg" else hashes[name]
-                self.assertEqual(hashlib.sha256((assets / name).read_bytes()).hexdigest(), expected)
-            if skill == CLASSIC:
-                self.assertIn("NOT covered by the CC0", (assets / "PAPER_OVERRIDE.txt").read_text())
-            for retired in ("classic-bgm.mp3", "vintage-paper-bg.jpg", "背景1.jpg", "water-ripple-bg.png"):
-                self.assertFalse((assets / retired).exists(), retired)
+            self.assertEqual(hashlib.sha256((assets / "classic-bgm.mp3").read_bytes()).hexdigest(), original_music)
+            self.assertFalse((assets / "canon-in-d-major.mp3").exists())
 
 
 if __name__ == "__main__":

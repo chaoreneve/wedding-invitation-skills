@@ -64,8 +64,8 @@ try{
     assert(await page.locator('.asset-credits-link').isVisible(),'materials link missing');
     const credits=await context.newPage();
     await credits.goto(`${base}/${name}/materials.html`);
-    assert((await credits.textContent('main')).includes('Kevin MacLeod'));
-    assert(await credits.locator('a[href="https://creativecommons.org/licenses/by/4.0/"]').count());
+    assert((await credits.textContent('main')).includes('严禁商用'));
+    assert((await credits.textContent('main')).includes('授权状态未确认'));
     await credits.close();
     await page.screenshot({path:path.join(work,`${name}-cover.png`)});
     if(!small&&name!=='classic-green')await page.screenshot({path:path.join(root,`docs/previews/${name}.png`)});
@@ -73,8 +73,8 @@ try{
     await page.locator('h1').click();
     await page.waitForFunction(()=>window.__testAudio[0]?.currentTime>0&&!window.__testAudio[0].paused);
     const audioInfo=await page.evaluate(()=>({duration:__testAudio[0].duration,loop:__testAudio[0].loop,src:__testAudio[0].src}));
-    assert(audioInfo.duration>350&&audioInfo.duration<360);
-    assert(audioInfo.loop&&audioInfo.src.endsWith('canon-in-d-major.mp3'));
+    assert(audioInfo.duration>180&&audioInfo.duration<185);
+    assert(audioInfo.loop&&audioInfo.src.endsWith('classic-bgm.mp3'));
     await page.locator(musicButton).click();
     assert(await page.evaluate(()=>__testAudio[0].paused));
     await page.locator('h1').click();

@@ -94,7 +94,7 @@ def copy_media(config, source_dir, output, music_omitted):
   media["missionProof"]=one(media.get("missionProof", ""),"media.missionProof")
   media["accepted"]=one(media.get("accepted", ""),"media.accepted")
   if not music_omitted:media["music"]=one(media.get("music", ""),"media.music")
-  else:media["music"]="./assets/canon-in-d-major.mp3"
+  else:media["music"]="./assets/classic-bgm.mp3"
   for i,item in enumerate(media.get("gallery",[])):
     item["src"]=one(item.get("src",""),f"media.gallery[{i}].src")
     if item.get("largeSrc"):item["largeSrc"]=one(item["largeSrc"],f"media.gallery[{i}].largeSrc")

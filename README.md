@@ -9,7 +9,7 @@
 
 ## 当前发布状态
 
-这是供审阅的私有仓库。经典版按用户要求恢复原项目纸纹，其再分发授权待确认，不属于 CC0；见证者仍使用 CC0 纸纹。新绘装饰采用 CC0，Kevin MacLeod 的卡农录音采用 CC BY 4.0。网页和发布包保留署名及纸纹例外。详见 [素材清单](ASSET_LICENSES.md)。公开前仍需处理经典纸纹授权、项目代码许可与旧历史，见 [LICENSE.md](LICENSE.md)。
+这是供审阅的私有仓库。两版均按用户要求恢复原项目 BGM、纸纹及信封等素材，统一标注“严禁商用；授权状态未确认”。未使用后来寻找的卡农或替代纸纹，不能将备选素材的 CC0／CC BY 许可套用在当前默认素材上。网页和发布包保留说明，详见 [素材清单](ASSET_LICENSES.md)。公开前仍需确认原素材再分发授权及代码许可，见 [LICENSE.md](LICENSE.md)。
 
 仓库只包含模板、脚本、说明和虚构示例，不包含任何实际婚礼项目、宾客名单、登录资料或个人部署链接。
 
@@ -75,4 +75,4 @@ python3 tools/verify.py
 
 可选的 GitHub Actions 检查模板位于 `tools/verify-workflow.example.yml`。仓库当前未启用工作流；拥有相应工作流写入权限时，可将模板复制到 `.github/workflows/verify.yml`。本地验证不受影响。
 
-示例配置见 [examples](examples/)，脱敏预览见 [docs/previews](docs/previews/)；素材来源与重建方法见 [asset-sources](asset-sources/)。运行 `node tools/build-assets.mjs` 可重建纸纹和信封。公开前仍需完成的事项见 [ASSET_LICENSES.md](ASSET_LICENSES.md)。
+示例配置见 [examples](examples/)，脱敏预览见 [docs/previews](docs/previews/)。asset-sources 中先前下载的替代素材仅为历史备选，未接入默认模板。运行 `node tools/build-assets.mjs` 只会更新原素材说明与校验值，不改写素材。公开前仍需完成的事项见 [ASSET_LICENSES.md](ASSET_LICENSES.md)。

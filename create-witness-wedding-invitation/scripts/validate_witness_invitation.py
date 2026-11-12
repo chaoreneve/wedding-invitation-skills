@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 def main():
   parser=argparse.ArgumentParser(description=__doc__);parser.add_argument("directory",type=Path);args=parser.parse_args();root=args.directory.resolve();errors=[];warnings=[]
-  for name in ("index.html","styles.css","witness.css","witness.js","config.js","invitation.json","assets/paper-warm.jpg","assets/og-witness-letter.png","materials.html","assets/NOTICES.txt","assets/licenses/CC-BY-4.0.txt","assets/licenses/CC0-1.0.txt"):
+  for name in ("index.html","styles.css","witness.css","witness.js","config.js","invitation.json","assets/paper-warm.jpg","assets/og-witness-letter.png","materials.html","assets/NOTICES.txt"):
     if not (root/name).is_file():errors.append(f"missing required file: {name}")
   if errors:return report(errors,warnings)
   try:data=json.loads((root/"invitation.json").read_text(encoding="utf-8"))
@@ -37,7 +37,8 @@ def main():
   html=(root/"index.html").read_text(encoding="utf-8")
   if 'href="./materials.html"' not in html:errors.append("missing accessible music/material attribution link")
   notices=(root/"assets/NOTICES.txt").read_text(encoding="utf-8")
-  if "Kevin MacLeod" not in notices or "https://creativecommons.org/licenses/by/4.0/" not in notices:errors.append("bundled recording attribution is incomplete")
+  if "严禁商用" not in notices or "授权状态未确认" not in notices:errors.append("original-material non-commercial and unverified-authorization notice is incomplete")
+  warnings.append("original witness materials: commercial use prohibited; authorization unverified")
   if type(data.get("privacy",{}).get("noindex")) is not bool:errors.append("privacy.noindex must be a boolean")
   for field in ("og:title","og:description","og:image"):
     if not re.search(rf'<meta\s+property=["\']{re.escape(field)}["\']\s+content=["\'][^"\']+["\']',html):errors.append(f"missing static {field} metadata")

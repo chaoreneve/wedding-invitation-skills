@@ -18,7 +18,7 @@ RUNTIME_FILES = {
     "location-card.css", "mobile-pages.css", "music-control.css",
     "theme-palette.css", "theme-presets.css",
     "assets/placeholder.svg", "assets/paper-warm.jpg", "assets/PAPER_OVERRIDE.txt", "materials.html",
-    "assets/NOTICES.txt", "assets/licenses/CC-BY-4.0.txt", "assets/licenses/CC0-1.0.txt",
+    "assets/NOTICES.txt",
 }
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"}
 PRIVATE_METADATA_MARKERS = (b"Exif\x00\x00", b"<x:xmpmeta", b"http://ns.adobe.com/xap/1.0/", b"eXIf", b"EXIF")
@@ -58,7 +58,7 @@ def main() -> int:
         relative = Path(name)
         path = site / relative
         if (relative.is_absolute() or ".." in relative.parts or
-            (name not in RUNTIME_FILES and name != "assets/canon-in-d-major.mp3" and not name.startswith("assets/user/")) or
+            (name not in RUNTIME_FILES and name != "assets/classic-bgm.mp3" and not name.startswith("assets/user/")) or
             not path.resolve().is_relative_to(site) or path.is_symlink() or not path.is_file()):
             print(f"error: invalid release file: {name}", file=sys.stderr)
             return 1

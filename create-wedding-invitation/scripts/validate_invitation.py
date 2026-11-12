@@ -25,8 +25,7 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
     required_files = ("index.html", "styles.css", "print.css", "invite.js", "config.js", "invitation.json",
-                      "materials.html", "assets/paper-warm.jpg", "assets/NOTICES.txt",
-                      "assets/licenses/CC-BY-4.0.txt", "assets/licenses/CC0-1.0.txt")
+                      "materials.html", "assets/paper-warm.jpg", "assets/NOTICES.txt")
     for name in required_files:
         if not (root / name).is_file():
             errors.append(f"missing required file: {name}")
@@ -108,8 +107,8 @@ def main() -> int:
     if 'href="./materials.html"' not in html:
         errors.append("missing accessible music/material attribution link")
     notices = (root / "assets/NOTICES.txt").read_text(encoding="utf-8")
-    if "Kevin MacLeod" not in notices or "https://creativecommons.org/licenses/by/4.0/" not in notices:
-        errors.append("bundled recording attribution is incomplete")
+    if "严禁商用" not in notices or "授权状态未确认" not in notices:
+        errors.append("original-material non-commercial and unverified-authorization notice is incomplete")
     if 'name="robots"' not in html:
         errors.append("index.html must contain a robots meta tag")
     for field in ("og:title", "og:description", "og:image"):
