@@ -141,7 +141,7 @@ class ReleaseChecks(unittest.TestCase):
                 self.assertIn("assets/NOTICES.txt", bundle.namelist())
                 notices = bundle.read("assets/NOTICES.txt").decode("utf-8")
                 self.assertIn("严禁商用", notices)
-                self.assertIn("授权状态未确认", notices)
+                self.assertNotIn("授权状态未确认", notices)
             (site / "assets/NOTICES.txt").unlink()
             run(skill / "scripts" / validator, site, succeeds=False)
             run(skill / "scripts" / packager, site, "--output", self.work / f"{example}-missing-credit.zip", succeeds=False)

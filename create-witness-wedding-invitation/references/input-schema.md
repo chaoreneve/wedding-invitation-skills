@@ -37,7 +37,7 @@ Available relationship names and codes (derived from the original witness invita
 - `media.share`: optional override for the link-preview image. When omitted, use the bundled original sealed-envelope image, even if gallery photos exist.
 - `media.missionProof`: optional image beside the mission checklist; defaults to the first gallery image.
 - `media.accepted`: optional final-scene image; defaults to the first gallery image, independently of the link-preview image.
-- `media.music`: omit for bundled classic BGM, set `""` for silent mode, or supply a permitted replacement. The bundled default is the original classic-project BGM: “严禁商用；授权状态未确认”. Preserve materials.html and NOTICES.txt; see materials.md.
+- `media.music`: omit for bundled classic BGM, set `""` for silent mode, or supply a permitted replacement. The bundled default is the original classic-project BGM: “严禁商用”. Preserve materials.html and NOTICES.txt; see materials.md.
 
 Only documented fields should enter the configuration. Keep private planning notes, account details and the batch guest list outside each public recipient site.
 

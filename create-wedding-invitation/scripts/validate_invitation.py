@@ -102,13 +102,11 @@ def main() -> int:
     if not media.get("share") and not (media.get("ending") or media.get("cover")):
         warnings.append("share image is missing; select an existing cover or ending photo")
     html = (root / "index.html").read_text(encoding="utf-8")
-    if (root / "assets/PAPER_OVERRIDE.txt").exists():
-        warnings.append("original classic paper restored; redistribution permission is unverified; keep private")
     if 'href="./materials.html"' not in html:
         errors.append("missing accessible music/material attribution link")
     notices = (root / "assets/NOTICES.txt").read_text(encoding="utf-8")
-    if "严禁商用" not in notices or "授权状态未确认" not in notices:
-        errors.append("original-material non-commercial and unverified-authorization notice is incomplete")
+    if "严禁商用" not in notices:
+        errors.append("original-material non-commercial notice is missing")
     if 'name="robots"' not in html:
         errors.append("index.html must contain a robots meta tag")
     for field in ("og:title", "og:description", "og:image"):

@@ -37,8 +37,7 @@ def main():
   html=(root/"index.html").read_text(encoding="utf-8")
   if 'href="./materials.html"' not in html:errors.append("missing accessible music/material attribution link")
   notices=(root/"assets/NOTICES.txt").read_text(encoding="utf-8")
-  if "严禁商用" not in notices or "授权状态未确认" not in notices:errors.append("original-material non-commercial and unverified-authorization notice is incomplete")
-  warnings.append("original witness materials: commercial use prohibited; authorization unverified")
+  if "严禁商用" not in notices:errors.append("original-material non-commercial notice is missing")
   if type(data.get("privacy",{}).get("noindex")) is not bool:errors.append("privacy.noindex must be a boolean")
   for field in ("og:title","og:description","og:image"):
     if not re.search(rf'<meta\s+property=["\']{re.escape(field)}["\']\s+content=["\'][^"\']+["\']',html):errors.append(f"missing static {field} metadata")

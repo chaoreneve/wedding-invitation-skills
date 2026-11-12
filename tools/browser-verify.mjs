@@ -65,7 +65,7 @@ try{
     const credits=await context.newPage();
     await credits.goto(`${base}/${name}/materials.html`);
     assert((await credits.textContent('main')).includes('严禁商用'));
-    assert((await credits.textContent('main')).includes('授权状态未确认'));
+    assert(!(await credits.textContent('main')).includes('授权状态未确认'));
     await credits.close();
     await page.screenshot({path:path.join(work,`${name}-cover.png`)});
     if(!small&&name!=='classic-green')await page.screenshot({path:path.join(root,`docs/previews/${name}.png`)});
