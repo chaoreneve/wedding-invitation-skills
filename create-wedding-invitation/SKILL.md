@@ -34,6 +34,8 @@ Create a private, mobile-first static wedding invitation from structured user in
 
 ## Editing Rules
 
+- Mark any authorization-unverified bundled material “严禁商用，授权状态未确认”, including the restored original paper. Preserve this notice in the generated website and release package; it does not grant the original creator's permission. Keep CC0 and CC BY 4.0 assets under their actual licenses without adding this restriction to them.
+
 - Preserve the latest user-corrected spelling of names and banquet rooms everywhere. Ask “请柬上想把谁的名字放在前面？” when display order is unconfirmed; never default to groom-first or bride-first. An explicit user choice takes priority and remains unchanged on subsequent edits. Use `couple.brideFirst` for display order, without swapping identities; check cover, information card, signature, page title and sharing text.
 - Before delivery, follow [references/mobile-quality.md](references/mobile-quality.md) for one-screen layouts, whole-page typography and readable closing signatures, balanced whitespace, gallery placeholders, verified location cards and refresh checks.
 - Reuse the bundled four-page composition layer as the default visual balance; adapt it to content rather than rebuilding each page's spacing independently.

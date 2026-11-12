@@ -37,6 +37,8 @@ Continue conversationally: acknowledge information already given, ask only for t
 
 ## Rules
 
+- If a user explicitly supplies or selects material whose authorization is unverified, record that status and mark it “严禁商用，授权状态未确认” in its materials notice. This label is not a license grant. Do not apply it to this skill's documented CC0 or CC BY 4.0 defaults.
+
 - Preserve corrected names, date, time, venue and user-chosen display order everywhere. Never default to groom-first or bride-first when the user has not chosen. Do not invent guest relationships, shared memories, task items or RSVP responses.
 - Relationship codes 00–14 are an internal selection aid. Accept either a relationship name or its code; use the user's exact relationship choice. Handwritten letter fields override the selected template. If the user has not chosen a relationship, use the general letter. Review relation-specific wording with the user before publishing.
 - A strict identity check is theatrical personalization, not authentication or access control. Static HTML cannot securely protect the letter. Say so before public hosting.

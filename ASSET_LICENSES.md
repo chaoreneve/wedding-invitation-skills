@@ -4,7 +4,7 @@
 
 | 素材 | 当前来源与许可 | 改动及再分发要求 |
 | --- | --- | --- |
-| 经典版 `assets/paper-warm.jpg` | 恢复的原经典项目纸纹；再分发授权待确认 | 非 CC0，SHA-256 及例外见 assets/PAPER_OVERRIDE.txt，保持私有 |
+| 经典版 `assets/paper-warm.jpg` | 恢复的原经典项目纸纹；再分发授权待确认 | **严禁商用，授权状态未确认**；此标注不是原作者授权。非 CC0，校验值及例外见 assets/PAPER_OVERRIDE.txt，保持私有 |
 | 见证者 `assets/paper-warm.jpg` 与仓库替代纸纹 | ambientCG / Lennart Demes 的 Paper001、Paper002；CC0 1.0 | CSS 混合色图并调为暖纸色；允许免费修改、商用和再分发，不强制署名 |
 | 两版 `assets/canon-in-d-major.mp3` | Kevin MacLeod 的 Canon in D Major，ISRC USUAN1100301；CC BY 4.0 | 移除 ID3 与内嵌封面，转为适合手机加载的 96 kbps MP3；再分发时保留作者、来源、许可及修改说明 |
 | 见证者 `assets/og-witness-letter.png` | 项目重新绘制的信封、玫瑰线稿、封蜡，加上述 CC0 纸纹 | 新几何绘图采用 CC0 1.0；由 tools/build-assets.mjs 重建 |

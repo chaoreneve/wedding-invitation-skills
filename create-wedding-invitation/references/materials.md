@@ -1,5 +1,7 @@
 # Bundled materials and redistribution
 
+Label the unverified original paper “严禁商用，授权状态未确认”. This is a project restriction, not evidence of permission from its creator. Keep the label in the generated materials page and notices; do not apply it to the separately licensed CC0 or CC BY 4.0 assets.
+
 Current classic exception: at the user's request, assets/paper-warm.jpg is the original classic-project paper again. Its permission to redistribute is unverified; it is NOT CC0. Preserve assets/PAPER_OVERRIDE.txt and the exception in materials.html/NOTICES.txt. Keep this version private until cleared or replaced. The CC0 papers described below remain alternatives; that paragraph does not license the restored background.
 
 The bundled recording is **Canon in D Major**, Kevin MacLeod (incompetech.com), ISRC USUAN1100301, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100301 . ID3 tags and embedded artwork were removed, and the recording was transcoded to 96 kbps MP3 for mobile use. Keep the author, track title, source, license link and modification notice when sharing or adapting it. This recording allows commercial use under that license; do not repeat the retired BGM's non-commercial restriction.

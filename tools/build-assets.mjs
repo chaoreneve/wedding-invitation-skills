@@ -35,7 +35,7 @@ try {
     await writeFile(path.join(target,'assets/placeholder.svg'),placeholder);
     const exception = privatePaper ? await readFile(path.join(target,'assets/PAPER_OVERRIDE.txt'),'utf8') : '';
     await writeFile(path.join(target,'assets/NOTICES.txt'),exception ? exception+'\nThe CC0 paper description below applies to the alternative source papers, not the restored classic background.\n\n'+notices : notices);
-    await writeFile(path.join(target,'materials.html'),privatePaper ? materials.replace('<h2>纸张与装饰</h2>','<h2>当前经典版纸纹：授权待确认</h2><p>本版本按用户要求恢复原项目纸纹，不属于 CC0 素材。再分发授权尚未确认，请保持私有；以下 CC0 纸纹是保留的替代方案。</p><h2>替代纸纹与其他装饰</h2>') : materials);
+    await writeFile(path.join(target,'materials.html'),privatePaper ? materials.replace('<h2>纸张与装饰</h2>','<h2>当前经典版纸纹：严禁商用</h2><p><strong>严禁商用，授权状态未确认。</strong>本版本按用户要求恢复原项目纸纹，不属于 CC0 素材。本标注不构成原作者授权；再分发授权尚未确认，请保持私有。以下 CC0 纸纹是保留的替代方案，其许可不受此限制影响。</p><h2>替代纸纹与其他装饰</h2>') : materials);
     for (const name of ['CC-BY-4.0.txt','CC0-1.0.txt']) await copyFile(path.join(source,name),path.join(target,'assets/licenses',name));
     await copyFile(path.join(source,'canon-in-d-major.mp3'),path.join(target,'assets/canon-in-d-major.mp3'));
   }
