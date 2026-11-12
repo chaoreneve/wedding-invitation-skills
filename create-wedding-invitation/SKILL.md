@@ -52,7 +52,7 @@ Create a private, mobile-first static wedding invitation from structured user in
 - Keep `privacy.noindex` enabled by default. Explain that `noindex` reduces search indexing but is not access control.
 - Keep account handling in the current user task only. Never add a user's Cloudflare email, account ID, credentials, session data, tokens, authorization URLs, deployment history, or personal site links to this skill, its templates or output packages; follow [references/deployment.md](references/deployment.md).
 - Keep all text as text content; never inject user-provided HTML.
-- Do not copy the reference project's private photos, names, guest lists, addresses, or unapproved media into generated invitations. Only the documented licensed bundled assets are permitted defaults; never reintroduce retired audio or images.
+- Do not copy the reference project's private photos, names, guest lists, addresses, or unapproved media into generated invitations. Use the documented licensed defaults, except for the explicitly restored classic paper marked by PAPER_OVERRIDE.txt; keep that paper private while its redistribution permission is unverified. Do not restore other retired audio or images.
 
 ## Bundled Resources
 
