@@ -7,15 +7,45 @@
 | `create-wedding-invitation` | 四屏经典请柬、连续照片放映、地点卡片；支持 PNG、PDF、一图版 | 先询问西式或中式；西式经典米白，中式红色纸纹。分享图优先封面照片 |
 | `create-witness-wedding-invitation` | 神秘信封、身份互动、专属来信、照片放映、见证任务 | 复古信纸；分享图默认使用信封图 |
 
+## 效果预览与在线体验
+
+同一份虚构邀请，两种打开方式。以下为「鸣人 & 佐助」非官方同人功能演示，日期、场地与故事文案均为虚构，不代表原作设定，也不代表与原作或权利人存在关联。
+
+### 经典展示版
+
+米白纸纹封面、连续胶片放映、重点清晰的赴宴信息，以及深暖棕纸纹结尾。
+
+<p>
+  <img src="docs/showcase/classic-cover.png" width="210" alt="经典版：鸣人与佐助双人插画封面" />
+  <img src="docs/showcase/classic-ticket.png" width="210" alt="经典版：纸质邀约卡展示虚构婚礼日期与场地" />
+  <img src="docs/showcase/classic-ending.png" width="210" alt="经典版：深暖棕纸纹与双人相框结尾" />
+</p>
+
+[打开经典版在线体验](https://narusasu-classic-demo.pages.dev/)
+
+### 见证者模式
+
+从拆开神秘信封开始，经过身份互动、专属来信、照片放映，再领取见证任务。接受任务仅展示互动效果，不收集出席回执。
+
+<p>
+  <img src="docs/showcase/witness-envelope.png" width="210" alt="见证者模式：复古纸纹信封入口" />
+  <img src="docs/showcase/witness-letter.png" width="210" alt="见证者模式：面向演示来宾的专属来信" />
+  <img src="docs/showcase/witness-accepted.png" width="210" alt="见证者模式：双人插画与任务完成页面" />
+</p>
+
+[打开见证者模式在线体验](https://narusasu-witness-demo.pages.dev/)
+
+> **非官方同人演示，严禁商用。** 角色及动漫素材版权归各自权利人；此标注不授予宣传、转载或再分发许可。截图仅用于展示 Skill 的生成效果，不作为可复用素材提供。在线演示为公开静态网页，身份互动不是访问保护。截图只保存在 `docs/showcase/`，未将本案例的原始插画、图库、请柬配置或整站 ZIP 加入两个 Skill 的安装目录。
+
 ## 当前发布状态
 
-这是供审阅的私有仓库。两版均按用户要求恢复原项目 BGM、纸纹及信封等素材，统一标注“严禁商用；授权状态未确认”。未使用后来寻找的卡农或替代纸纹，不能将备选素材的 CC0／CC BY 许可套用在当前默认素材上。网页和发布包保留说明，详见 [素材清单](ASSET_LICENSES.md)。公开前仍需确认原素材再分发授权及代码许可，见 [LICENSE.md](LICENSE.md)。
+这是公开的 Skill 仓库。两版沿用原项目 BGM、纸纹及信封等素材，统一标注“严禁商用”。未使用后来寻找的卡农或替代纸纹，不能将备选素材的 CC0／CC BY 许可套用在当前默认素材上。网页和发布包保留说明，详见 [素材清单](ASSET_LICENSES.md) 与 [许可说明](LICENSE.md)。非商业标注不等于权利人授权，使用与再分发前仍需自行确认相应权限。
 
-仓库只包含模板、脚本、说明和虚构示例，不包含任何实际婚礼项目、宾客名单、登录资料或个人部署链接。
+仓库包含模板、脚本、说明、虚构示例与文档展示截图，不包含实际婚礼项目、私人宾客名单或登录资料。上方链接仅指向明确公开的虚构演示。
 
 ## 安装与开始
 
-在 Codex 中提供这个仓库的地址，并说：“请安装仓库中的 create-wedding-invitation 和 create-witness-wedding-invitation 两个 skill。”私有仓库需要使用者具有读取权限。也可将各 skill 文件夹复制到自己的 Codex skills 目录，通常为 `~/.codex/skills/`。安装后在新任务中尝试：
+在 Codex 中提供这个仓库的地址，并说：“请安装仓库中的 create-wedding-invitation 和 create-witness-wedding-invitation 两个 skill。”也可将各 skill 文件夹复制到自己的 Codex skills 目录，通常为 `~/.codex/skills/`。安装后在新任务中尝试：
 
 > 我想用经典版 skill 做请柬，想要中式红色纸纹。
 
